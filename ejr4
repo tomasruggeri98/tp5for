@@ -1,1 +1,36 @@
+// Ingresar 30 valores. Contar cuantos están entre 1 y 10, cuantos entre 10 y 20, cuantos entre 20 y 30 y cuantos son mas de 30.
+// Luego mostrar el porcentaje de cada grupo en el total.
 
+
+int grupo1a10 = 0;
+int grupo10a20 = 0;
+int grupo20a30 = 0;
+int masDe30 = 0;
+
+Console.WriteLine("Ingrese 30 números de a uno por línea");
+
+for (int i = 1; i <= 30; i++)
+{
+    int numero = int.Parse(Console.ReadLine());
+
+    if (numero > 0 && numero < 10) { grupo1a10++; }
+    else if (numero >= 10 && numero < 20)
+    { 
+        grupo10a20++; 
+    }
+   
+    else if (numero >= 20 && numero < 30)
+    { 
+        grupo20a30++;
+    }
+   
+    else if (numero >= 30) 
+    {
+        masDe30++;
+    }
+}
+
+double porcentajeGrupo1a10 = (grupo1a10 / 30) * 100;
+double porcentajeGrupo10a20 = (grupo10a20 / 30) * 100;
+double porcentajeGrupo20a30 = (grupo20a30 / 30) * 100;
+double porcentajeMasDe30 = (masDe30 / 30) * 100;
