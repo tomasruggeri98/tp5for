@@ -1,0 +1,18 @@
+// Ingresar 10 valores, indicar e imprimir cuántos son positivos, cuántos negativos y cuántos ceros
+
+int positivos = 0;
+int negativos = 0;
+int ceros = 0;
+
+Console.WriteLine("ingrese 10 numeros de a uno por línea:");
+for (int i = 0; i <= 10; i++)
+{
+    int numero = int.Parse(Console.ReadLine());
+    if (numero == 0) { ceros += 1; }
+    if (numero > 0) { positivos += 1;}
+    if (numero < 0) {  negativos += 1;}
+}
+
+Console.WriteLine("la cantidad de numeros positivos es: " + positivos);
+Console.WriteLine("la cantidad de ceros es: " + ceros);
+Console.WriteLine("la cantidad de numeros negativos es: " + negativos);
