@@ -1,0 +1,40 @@
+// Ingresar 8 valores por teclado, y a partir de esto sacar el promedio general,
+// sacar el promedio de lo valores pares y el promedio de los valores impares.
+// Luego mostrar por pantalla cuantos números superaron el valor 15.
+
+using System.Drawing;
+
+int sumaTotal = 0;
+int cantidadPares = 0;
+int sumaPares = 0;
+int cantidadImpares = 0;
+int sumaImpares = 0;
+int superior15 = 0;
+
+Console.WriteLine("Ingresar 8 valores numericos de a uno por línea: ");
+
+for (float i = 0; i < 8; i++)
+{
+    int numero = int.Parse(Console.ReadLine()); sumaTotal += numero;
+
+    if (numero % 2 == 0)
+    {
+        cantidadPares++;
+        sumaPares += numero;
+    }
+    else{cantidadImpares++; sumaImpares += numero;}
+
+    if (numero > 15)
+    {
+        superior15++;
+    }
+}
+
+double promedioTotal = sumaTotal / 8;
+double promedioPar = sumaPares / cantidadPares;
+double promedioImpar = sumaImpares / cantidadImpares;
+
+Console.WriteLine("El promedio general es: " + promedioTotal);
+Console.WriteLine("La cantidad de números mayores a 15 es: " + superior15);
+Console.WriteLine("El promedio de los números pares es: " + promedioPar);
+Console.WriteLine("El promedio de los números impares es: " + promedioImpar);
