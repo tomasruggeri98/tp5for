@@ -1,0 +1,27 @@
+// Ingresar la patente y monto de la multa de 50 autos, indicar e imprimir cuántos montos superan los $ 40
+// y del total cobrado que porcentaje representa la suma de los que superan los $40
+
+double cantidadsupera40 = 0;
+double sumacantidad40 = 0;
+double total = 0;
+
+
+for (int i = 0; i < 30; i++)
+{
+    Console.WriteLine("Ingresar la patente:");
+    string patente = Console.ReadLine();
+    Console.WriteLine("Ingrese monto de multa:");
+    double montomulta = float.Parse(Console.ReadLine());
+    total += montomulta;
+
+    if (montomulta > 40)
+    {
+        cantidadsupera40++;
+        sumacantidad40 += montomulta;
+    }
+
+}
+double porciento = ((double)sumacantidad40 / total) *100;
+
+Console.WriteLine("la cantidad de montos que superan los $40 son: " + cantidadsupera40);
+Console.WriteLine("del total cobrado, los montos que superan los $40 reprentan un: " + porciento + "%");
