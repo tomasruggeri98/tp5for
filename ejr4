@@ -30,7 +30,7 @@ for (int i = 1; i <= 30; i++)
     }
 }
 
-double porcentajeGrupo1a10 = (grupo1a10 / 30) * 100;
-double porcentajeGrupo10a20 = (grupo10a20 / 30) * 100;
-double porcentajeGrupo20a30 = (grupo20a30 / 30) * 100;
-double porcentajeMasDe30 = (masDe30 / 30) * 100;
+double porcentajeGrupo1a10 = ((double)grupo1a10 / 30) * 100;
+double porcentajeGrupo10a20 = ((double)grupo10a20 / 30) * 100;
+double porcentajeGrupo20a30 = ((double)grupo20a30 / 30) * 100;
+double porcentajeMasDe30 = ((double)masDe30 / 30) * 100;
